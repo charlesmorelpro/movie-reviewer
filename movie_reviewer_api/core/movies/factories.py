@@ -8,7 +8,6 @@ class MovieFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = Movie
 
-    id = factory.Faker("uuid4")
     title = factory.Faker("sentence", nb_words=4)
     description = factory.Faker("text")
 

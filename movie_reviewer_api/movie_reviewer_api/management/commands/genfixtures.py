@@ -16,4 +16,4 @@ class Command(base.BaseCommand):
         clean_all_database()
 
         logger.info("Create movies")
-        MovieFactory.create_batch(10)
+        MovieFactory.create_batch(17)

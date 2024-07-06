@@ -7,8 +7,7 @@ from core.movies.models import Movie
 
 
 class Review(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    grade = models.PositiveIntegerField(
+    grade = models.FloatField(
         validators=[MinValueValidator(0), MaxValueValidator(5)]
     )
-    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name="reviews")
