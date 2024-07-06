@@ -1,0 +1,46 @@
+version: "3.8"
+
+services:
+  postgres:
+    container_name: db
+    image: postgres:16.0-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: movie_reviewer_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    ports:
+      - "5433:5432"
+
+  backend:
+    container_name: backend
+    build:
+      context: ./movie_reviewer_api
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./movie_reviewer_api/:/app
+    depends_on:
+      - postgres
+    ports:
+      - "8000:8000"
+
+  frontend:
+    container_name: web
+    build:
+      context: ./movie_reviewer_web
+    volumes:
+      - ./movie_reviewer_web:/app
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
+
+volumes:
+  pgdata:
