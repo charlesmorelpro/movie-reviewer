@@ -10,9 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.29"
+    "@fontsource/roboto": "^5.0.13",
+    "axios": "^1.7.2",
+    "material-design-icons-iconfont": "^6.7.0",
+    "vue": "^3.4.29",
+    "vue-router": "^4.4.0",
+    "vuetify": "^3.6.11",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@mdi/font": "^7.4.47",
     "@vitejs/plugin-vue": "^5.0.5",
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
