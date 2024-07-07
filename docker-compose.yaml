@@ -11,11 +11,6 @@ services:
       POSTGRES_DB: movie_reviewer_db
     volumes:
       - pgdata:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD", "pg_isready", "-U", "postgres"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
     ports:
       - "5433:5432"
 
@@ -23,9 +18,13 @@ services:
     container_name: backend
     build:
       context: ./movie_reviewer_api
-    command: sh -c "python manage.py migrate && python manage.py genfixtures && python manage.py runserver 0.0.0.0:8000"
+    command: sh -c "python manage.py migrate && python manage.py genfixtures && python manage.py createsuperuser --noinput && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - ./movie_reviewer_api/:/app
+    environment:
+      - DJANGO_SUPERUSER_EMAIL=happydev@gmail.com
+      - DJANGO_SUPERUSER_USERNAME=charlesmorel
+      - DJANGO_SUPERUSER_PASSWORD=password
     depends_on:
       - postgres
     ports:
