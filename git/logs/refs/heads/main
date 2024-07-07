@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 50c3dde255709c1db077c9b349340e7fddeadc7f charles.morel <charles.morel@polyconseil.fr> 1720195476 +0200	branch: Created from refs/remotes/origin/main
+50c3dde255709c1db077c9b349340e7fddeadc7f c4027427f512808ac0b8b899eaa55644b566c0a6 charles.morel <charles.morel@polyconseil.fr> 1720195551 +0200	commit: init frontend and backend
+c4027427f512808ac0b8b899eaa55644b566c0a6 4f5cabc481693db13b761f8533d5b688819f163f charles.morel <charles.morel@polyconseil.fr> 1720351246 +0200	pull: Fast-forward
+4f5cabc481693db13b761f8533d5b688819f163f b88c8a69e9ad49be773dd48de87e5073d815fc00 charles.morel <charles.morel@polyconseil.fr> 1720353620 +0200	commit: add admin pannel with superuser
+b88c8a69e9ad49be773dd48de87e5073d815fc00 586c16907dd4e7a0c59cc2754ecd3105eae9a971 charles.morel <charles.morel@polyconseil.fr> 1720353702 +0200	commit: lint backend

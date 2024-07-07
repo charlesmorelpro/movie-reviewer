@@ -1,0 +1,20 @@
+0000000000000000000000000000000000000000 50c3dde255709c1db077c9b349340e7fddeadc7f charles.morel <charles.morel@polyconseil.fr> 1720195476 +0200	checkout: moving from master to main
+50c3dde255709c1db077c9b349340e7fddeadc7f c4027427f512808ac0b8b899eaa55644b566c0a6 charles.morel <charles.morel@polyconseil.fr> 1720195551 +0200	commit: init frontend and backend
+c4027427f512808ac0b8b899eaa55644b566c0a6 c4027427f512808ac0b8b899eaa55644b566c0a6 charles.morel <charles.morel@polyconseil.fr> 1720195577 +0200	checkout: moving from main to develop
+c4027427f512808ac0b8b899eaa55644b566c0a6 b864a5ce9299c38cbf18adb9b3bed6230084e3bd charles.morel <charles.morel@polyconseil.fr> 1720251100 +0200	commit: Add dockerfiles et docker-compose
+b864a5ce9299c38cbf18adb9b3bed6230084e3bd 0870c81633c4369935e7057bf7da8c7ebc6903cf charles.morel <charles.morel@polyconseil.fr> 1720256205 +0200	commit: Add models, database connection and data generating
+0870c81633c4369935e7057bf7da8c7ebc6903cf b9f75266f8a63af02dc09da56af3e9e6f9c18463 charles.morel <charles.morel@polyconseil.fr> 1720262456 +0200	commit: Add model serializers and API endpoints
+b9f75266f8a63af02dc09da56af3e9e6f9c18463 3741e9c86aede3cd08a7d7474e6b6259db1ffa1b charles.morel <charles.morel@polyconseil.fr> 1720279276 +0200	commit: Add list and details pages
+3741e9c86aede3cd08a7d7474e6b6259db1ffa1b c8a3b50c550f45fd1819e858050c68748b3044e7 charles.morel <charles.morel@polyconseil.fr> 1720351150 +0200	commit: Add movie edition, pagination and actors handling
+c8a3b50c550f45fd1819e858050c68748b3044e7 b758918407ca1bc17e96708a8809666c572669cd charles.morel <charles.morel@polyconseil.fr> 1720351166 +0200	commit: -
+b758918407ca1bc17e96708a8809666c572669cd b758918407ca1bc17e96708a8809666c572669cd charles.morel <charles.morel@polyconseil.fr> 1720351169 +0200	rebase (start): checkout develop
+b758918407ca1bc17e96708a8809666c572669cd b758918407ca1bc17e96708a8809666c572669cd charles.morel <charles.morel@polyconseil.fr> 1720351169 +0200	rebase (finish): returning to refs/heads/develop
+b758918407ca1bc17e96708a8809666c572669cd b758918407ca1bc17e96708a8809666c572669cd charles.morel <charles.morel@polyconseil.fr> 1720351188 +0200	rebase (start): checkout develop
+b758918407ca1bc17e96708a8809666c572669cd b758918407ca1bc17e96708a8809666c572669cd charles.morel <charles.morel@polyconseil.fr> 1720351188 +0200	rebase (finish): returning to refs/heads/develop
+b758918407ca1bc17e96708a8809666c572669cd c8a3b50c550f45fd1819e858050c68748b3044e7 charles.morel <charles.morel@polyconseil.fr> 1720351193 +0200	rebase (start): checkout main
+c8a3b50c550f45fd1819e858050c68748b3044e7 0f01f56ca633d7eeeb805c5e6e408f45ec961bc1 charles.morel <charles.morel@polyconseil.fr> 1720351193 +0200	rebase (fixup): Add movie edition, pagination and actors handling
+0f01f56ca633d7eeeb805c5e6e408f45ec961bc1 0f01f56ca633d7eeeb805c5e6e408f45ec961bc1 charles.morel <charles.morel@polyconseil.fr> 1720351193 +0200	rebase (finish): returning to refs/heads/develop
+0f01f56ca633d7eeeb805c5e6e408f45ec961bc1 c4027427f512808ac0b8b899eaa55644b566c0a6 charles.morel <charles.morel@polyconseil.fr> 1720351244 +0200	checkout: moving from develop to main
+c4027427f512808ac0b8b899eaa55644b566c0a6 4f5cabc481693db13b761f8533d5b688819f163f charles.morel <charles.morel@polyconseil.fr> 1720351246 +0200	pull: Fast-forward
+4f5cabc481693db13b761f8533d5b688819f163f b88c8a69e9ad49be773dd48de87e5073d815fc00 charles.morel <charles.morel@polyconseil.fr> 1720353620 +0200	commit: add admin pannel with superuser
+b88c8a69e9ad49be773dd48de87e5073d815fc00 586c16907dd4e7a0c59cc2754ecd3105eae9a971 charles.morel <charles.morel@polyconseil.fr> 1720353702 +0200	commit: lint backend
