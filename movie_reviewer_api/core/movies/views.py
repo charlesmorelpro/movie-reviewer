@@ -7,7 +7,7 @@ from core.movies.serializers import (MovieDetailsSerializer, MovieSerializer,
 
 
 class MoviesView(generics.ListAPIView):
-    queryset = Movie.objects.all()
+    queryset = Movie.objects.all().order_by("id")
     serializer_class = MovieSerializer
 
 

@@ -2,62 +2,60 @@ import { createStore } from "vuex";
 import axios from "axios";
 import DetailedMovieDTO from "../dto/movie/detailed-movie.dto";
 import MovieDTO from "../dto/movie/movie.dto";
+import ActorDTO from "../dto/actor/actor.dto";
 
 interface State {
-    movies: MovieDTO[];
+    movies: MovieDTO[] | null;
     nextUrl: string | null;
     prevUrl: string | null;
     selectedMovie: DetailedMovieDTO | null;
-
+    actors: ActorDTO[] | null;
+    movieCount: number;
 }
 
 export default createStore({
     state: {
-        movies: [] as MovieDTO[],
+        movies: null,
         nextUrl: null as string | null,
         prevUrl: null as string | null,
-        selectedMovie: null as DetailedMovieDTO | null
+        selectedMovie: null as DetailedMovieDTO | null,
+        actors: null,
+        movieCount: 0
     } as State,
     mutations: {
         setMovies(state, movies) {
             state.movies = movies;
         },
-        setNextUrl(state, url) {
-            state.nextUrl = url;
-        },
-        setPrevUrl(state, url) {
-            state.prevUrl = url;
-        },
         setSelectedMovie(state, movie) {
             state.selectedMovie = movie;
+        },
+        setActors(state, actors) {
+            state.actors = actors;
+        },
+        setMovieCount(state, count) {
+            state.movieCount = count;
         }
     },
     actions: {
-        async fetchMovies({ commit }) {
-            const response = await axios.get('http://localhost:8000/movies');
+        async fetchMovies({ commit }, page: number) {
+            const response = await axios.get(`http://localhost:8000/movies/?page=${page}`);
             const data = response.data;
             commit('setMovies', data.results);
-            commit('setNextUrl', data.next);
-            commit('setPrevUrl', data.previous);
+            commit('setMovieCount', data.count);
         },
         async fetchMovieDetails({ commit }, id) {
             const response = await axios.get(`http://localhost:8000/movies/${id}`);
             const data = response.data;
             commit('setSelectedMovie', data);
+        },
+        async fetchActors({commit}) {
+            const response = await axios.get('http://localhost:8000/actors/');
+            commit('setActors', response.data)
+        },
+        async updateMovie({dispatch}, data) {
+            const { id, ...movieData} = data
+            await axios.patch(`http://localhost:8000/movies/${id}/update/`, movieData);
+            dispatch('fetchMovies', 1);
         }
     },
-    getters: {
-        getMovies(state) {
-            return state.movies;
-        },
-        getNextUrl(state) {
-            return state.nextUrl;
-        },
-        getPrevUrl(state) {
-            return state.prevUrl;
-        },
-        getSelectedMovie(state) {
-            return state.selectedMovie;
-        }
-    }
 })

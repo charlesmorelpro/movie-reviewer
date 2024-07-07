@@ -22,4 +22,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("movies/", include("core.movies.urls")),
     path("reviews/", include("core.reviews.urls")),
+    path("actors/", include("core.actors.urls")),
 ]

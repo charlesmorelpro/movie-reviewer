@@ -23,7 +23,7 @@ services:
     container_name: backend
     build:
       context: ./movie_reviewer_api
-    command: python manage.py runserver 0.0.0.0:8000
+    command: sh -c "python manage.py migrate && python manage.py genfixtures && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - ./movie_reviewer_api/:/app
     depends_on:

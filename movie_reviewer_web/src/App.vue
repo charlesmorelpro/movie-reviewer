@@ -1,16 +1,4 @@
-<script lang="ts">
-import { onMounted } from 'vue';
-import { useStore } from 'vuex';
-
-export default {
-  setup() {
-    const store = useStore();
-
-    onMounted(() => {
-      store.dispatch('fetchMovies');
-    });
-  },
-};
+<script setup lang="ts">
 </script>
 
 <template>
